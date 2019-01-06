@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>todolist</title>
+  <style>
+
+    div {
+        text-align: left;
+        position: relative;
+      }
+      
+      span.droppable {
+        cursor: help;
+      }
+      
+      span.dropping {
+        border: 1px solid black;
+      }
+      
+      .open {
+        display: inline;
+      }
+      .close {
+        display: none;
+      }
+      </style>
+</head>
+
+<body">
+  <div id="treeHolder"></div>
+
+  </body>
+  <script type="text/javascript" src="src/TreeNode.js"></script>
+  <script>
+    window.onload = function () {
+      var root = {
+        name: "root",
+        childs: [
+          {
+            name: "項目1",
+            childs: [
+              {
+                name: "A",
+                childs: []
+              }
+            ]
+          },
+          {
+            name: "項目2",
+            childs: []
+          },
+          {
+            name: "項目3",
+            childs: []
+          }
+        ]
+      };
+      var rootNode = buildTree(root);
+      document.getElementById("treeHolder").innerHTML = rootNode.render();
+    }
+
+
+  </script>
+
+</html>
