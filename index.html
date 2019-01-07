@@ -29,41 +29,41 @@
       </style>
 </head>
 
-<body">
+<body>
   <div id="treeHolder"></div>
 
-  </body>
-  <script type="text/javascript" src="src/TreeNode.js"></script>
-  <script>
-    window.onload = function () {
-      var root = {
-        name: "root",
-        childs: [
-          {
-            name: "項目1",
-            childs: [
-              {
-                name: "A",
-                childs: []
-              }
-            ]
-          },
-          {
-            name: "項目2",
-            childs: []
-          },
-          {
-            name: "項目3",
-            childs: []
-          }
-        ]
-      };
-      var rootNode = buildTree(root);
-      document.getElementById("treeHolder").innerHTML = rootNode.render();
-      rootNode.DebugStr(0);
-    }
+</body>
+<script type="text/javascript" src="src/TreeNode.js"></script>
+<script>
+  window.onload = function () {
+    var root = {
+      name: "root",
+      childs: [
+        {
+          name: "項目1",
+          childs: [
+            {
+              name: "A",
+              childs: []
+            }
+          ]
+        },
+        {
+          name: "項目2",
+          childs: []
+        },
+        {
+          name: "項目3",
+          childs: []
+        }
+      ]
+    };
+    var rootNode = buildTree(root);
+    document.getElementById("treeHolder").innerHTML = rootNode.render();
+    rootNode.DebugStr(0);
+  }
 
 
-  </script>
+</script>
 
 </html>
